@@ -3,10 +3,7 @@ import { motion } from "framer-motion";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-// const API_HEADERS = {
-//   Authorization: "Bearer your-auth-token",
-//   Accept: "application/json",
-// };
+
 
 const BookingPage = () => {
   const [employeeId, setEmployeeId] = useState("");
@@ -65,6 +62,7 @@ const BookingPage = () => {
           required
           className="w-full p-2 border border-gray-300 rounded"
         />
+        {error && <p className="text-red-500">{error}</p>}
         <button
           type="submit"
           className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded"
